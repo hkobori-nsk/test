@@ -1,99 +1,228 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>シンプルホームページ</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Travel - あなたの旅をデザイン</title>
+    <style>
+        /* --- CSS Start --- */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
 
-    header {
-      background-color: #0073e6;
-      color: white;
-      padding: 1rem 2rem;
-    }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 0;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px 0;
+        }
 
-    nav {
-      margin-top: 0.5rem;
-    }
+        header h1 {
+            margin: 0;
+            display: inline-block;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 1rem;
-    }
+        nav {
+            float: right;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    main {
-      padding: 2rem;
-      background-color: white;
-      max-width: 960px;
-      margin: 2rem auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+        nav li {
+            display: inline;
+            margin-left: 20px;
+        }
 
-    h2 {
-      color: #0073e6;
-    }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    main img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+        .hero {
+            background-image: url('https://source.unsplash.com/1200x500/?travel,nature');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #333;
-      color: white;
-      margin-top: 2rem;
-    }
+        .hero .btn {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
 
-    @media (max-width: 600px) {
-      header, main, footer {
-        padding: 1rem;
-      }
-    }
-  </style>
+        .section {
+            padding: 60px 0;
+        }
+
+        .bg-light {
+            background-color: #f4f4f4;
+        }
+
+        .destinations {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                float: none;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .destinations {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        /* --- CSS End --- */
+    </style>
 </head>
 <body>
-  <header>
-    <h1>私のホームページ</h1>
-    <nav>
-      <a href="#">ホーム</a>
-      <a href="#">プロフィール</a>
-      <a href="#">お問い合わせ</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>ようこそ！</h2>
-    <p>このページはサンプルのホームページです。HTMLとCSSだけで構成されています。</p>
-    <p>レスポンシブ対応で、スマホからも見やすい設計になっています。</p>
-    <img src="https://github.com/hkobori-nsk/test/blob/main/a.jpg?raw=true" alt="サンプル画像">
-  </main>
+    <header>
+        <div class="container">
+            <h1>Dream Travel</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">会社紹介</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#destinations">人気の旅先</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div style="clear: both;"></div>
+        </div>
+    </header>
 
-  <footer>
-    &copy; 2025 私のホームページ
-  </footer>
+    <section class="hero">
+        <div class="container">
+            <h2>世界中を旅しよう</h2>
+            <p>あなたの夢の旅を、私たちが叶えます。</p>
+            <a href="#contact" class="btn">今すぐ相談</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>会社紹介</h2>
+            <p>Dream Travelは20年以上の実績を持つ旅行会社です。国内外の旅を、お客様一人ひとりに合わせて提案します。</p>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2>サービス</h2>
+            <ul>
+                <li>オーダーメイド旅行プラン</li>
+                <li>航空券・ホテル手配</li>
+                <li>添乗員付きツアー</li>
+                <li>海外旅行保険の手続き</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="destinations" class="section">
+        <div class="container">
+            <h2>人気の旅先</h2>
+            <div class="destinations">
+                <div class="card">
+                    <img src="https://source.unsplash.com/300x200/?paris" alt="パリ">
+                    <h3>フランス・パリ</h3>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/300x200/?kyoto" alt="京都">
+                    <h3>日本・京都</h3>
+                </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/300x200/?hawaii" alt="ハワイ">
+                    <h3>アメリカ・ハワイ</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <form>
+                <input type="text" placeholder="お名前" required>
+                <input type="email" placeholder="メールアドレス" required>
+                <textarea placeholder="ご相談内容" required></textarea>
+                <button type="submit">送信する</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dream Travel. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-
